@@ -3,4 +3,5 @@
 
 
 int strlength(char *s);
+int StringToInt(char *str);
 #endif
