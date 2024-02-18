@@ -3,7 +3,7 @@
  * strdublicate - dublicate string to another
  * @s: string should be dublicate
  * Return: Dublicated string
- * 
+ *
 */
 char *strdublicate(char *s)
 {
@@ -20,8 +20,8 @@ if (!res)
 return (NULL);
 while (i < len)
 {
-    res[i] = s[i];
-    i++;
+res[i] = s[i];
+i++;
 }
 
 res[i] = '\0';
