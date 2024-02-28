@@ -26,7 +26,7 @@ return (-1);
 }
 if (cmd[checker - 1] == '\n')
 cmd[checker - 1] = '\0';
-  exec(cmd, argv);
+exec(cmd, argv);
 }
 free(cmd);
 return (0);
