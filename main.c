@@ -24,31 +24,10 @@ int main(int argc, char **argv)
             perror("Error");
             return -1;
         }
-
         if (cmd[checker - 1] == '\n')
             cmd[checker - 1] = '\0';
-
-        child_pid = fork();
-
-        if (child_pid == -1)
-        {
-            perror("Error forking");
-            exit(-1);
-        }
-        else if (child_pid == 0)
-        {
-            if (execvp(cmd, argv) == -1)
-            {
-                perror("Error");
-                exit(-1);
-            }
-        }
-        else
-        {
-            waitpid(child_pid, &s, 0);
-        }
+          exec(cmd, argv);
     }
-
     free(cmd);
     return 0;
 }
