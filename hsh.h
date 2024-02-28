@@ -14,4 +14,5 @@ extern char **environ;
 int strlength(char *s);
 int StringToInt(char *str);
 char *strdublicate(char *s);
+void exec(char *command, char **argv);
 #endif
